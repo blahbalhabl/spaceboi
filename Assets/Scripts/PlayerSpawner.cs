@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class PlayerSpawner : MonoBehaviour
 {
     public GameObject playerObject;
+    public void EnableCanvas()
+        {
+            CanvasObject.SetActive(true);
+        }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +19,6 @@ public class PlayerSpawner : MonoBehaviour
         if(scene.name == "MainScene") {
             GameObject newPlayer = (GameObject)Instantiate(playerObject);
             newPlayer.transform.localScale = Vector2.one;
-        }
+        }  
     }
 }
