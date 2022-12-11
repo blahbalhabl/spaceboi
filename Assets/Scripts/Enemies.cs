@@ -6,6 +6,7 @@ public class Enemies : MonoBehaviour
 {
     public Vector2 speedMinMax;
     float speed, isVisible;
+    [SerializeField] private AudioSource hitSoundEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,13 @@ public class Enemies : MonoBehaviour
 
         if (transform.position.y < isVisible) {
             Destroy (gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D trigerCollider) 
+    {
+        if (trigerCollider.tag == "Player") {
+            hitSoundEffect.Play();
         }
     }
 

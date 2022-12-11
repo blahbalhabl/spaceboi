@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
                 OnPlayerDeath();
                 Destroy(gameObject);
             }
-            
         }
     }
 }
