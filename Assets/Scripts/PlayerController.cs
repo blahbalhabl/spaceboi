@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {   
     public event System.Action OnPlayerDeath;
+    public Joystick joystick;
     public float speed = 10;
     float screenHalfWidth, screenHalfHeight;
 
